@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1356345_kz39v5izudb.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <title>严选</title>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but gshop-client_blank doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    !(function(){
+      var width = document.documentElement.clientWidth;
+      var styleNode = document.createElement('style');
+      styleNode.innerHTML = 'html{font-size: '+ width/16 +'px !important;}';
+      document.head.appendChild(styleNode);
+    })();
+
+    document.addEventListener('touchstart',function(event){
+      event.preventDefault();
+    });
+
+    var aNodes = document.querySelectorAll('a');
+    for(var i = 0; i < aNodes.length; i++){
+      aNodes[i].addEventListener('touchstart',function(){
+          window.location.href = this.href;
+      })
+    }
+  </script>
+</html>
